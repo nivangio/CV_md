@@ -1,0 +1,98 @@
+---
+name: Hernan
+surname: Resnizky
+position: "Data Science Consultant"
+address: "Av de Los Incas 4461, CABA, Argentina"
+phone: +54911-2258-4528
+www: www.hernanresnizky.com
+email: "hr@cybertec.at"
+github: nivangio
+linkedin: hernan-resnizky
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tidyverse)
+```
+
+# Experience(Summary)
+```{r}
+
+tribble(
+  ~ role, ~ company, ~ loc, ~ dates, ~ details,
+  "Data Scientist", "Cybertec", "Buenos Aires, Argentina", "2017 - Present", "Machine Learning/Big Data Modelling",
+  "Data Scientist", "Cybertec", "Buenos Aires, Argentina", "2017 - Present", "Provided Trainings",
+  "Data Scientist", "Cybertec", "Buenos Aires, Argentina", "2017 - Present", "Exploratory Data Analysis",
+  "Data Scientist", "Cybertec", "Buenos Aires, Argentina", "2017 - Present", "Data Visualization",
+  "Data Science Consultant", "Independent", "Buenos Aires, Argentina", "2013 - Present", "Machine Learning/Big Data Modelling",
+  "Data Science Consultant", "Independent", "Buenos Aires, Argentina", "2013 - Present", "End-to-End development of Big Data Solutions",
+  "Data Science Consultant", "Independent", "Buenos Aires, Argentina", "2013 - Present", "Computer Vision models",
+  "Data Science Consultant", "Independent", "Buenos Aires, Argentina", "2013 - Present", "Ad-hoc data Visualization Dashboards",
+  "Data Science Consultant", "Independent", "Buenos Aires, Argentina", "2013 - Present", "Optimization Algorithms",
+  "Data Science Consultant", "Independent", "Buenos Aires, Argentina", "2013 - Present", "Text Mining",
+  "Data Science Consultant", "Independent", "Buenos Aires, Argentina", "2013 - Present", "Clients(Summary): World Bank, Ministry of Education, Outernets",
+  "Senior Data Mining Analyst", "Despegar.com", "Buenos Aires, Argentina","2013-2015", "Scoring models to identify valuable offers",
+  "Senior Data Mining Analyst", "Despegar.com", "Buenos Aires, Argentina","2013-2015", "Purchase probability models",
+  "Senior Data Mining Analyst", "Despegar.com", "Buenos Aires, Argentina","2013-2015", "Learn-To-Rank Algorithms",
+  "Senior Data Mining Analyst", "Despegar.com", "Buenos Aires, Argentina","2013-2015", "Creation of tools (libraries) and standards to optimize data-extraction/processing from SQL and No-SQL sources (JSON,XML)",
+  "Data Quality Specialist", "Microsoft LATAM AHQ (in Wunderman)", "Buenos Aires, Argentina","2012-2013", "Improvement and ernichment of Marketing Databases for LATAM",
+  "Online Survey Analyst/Scripter", "Livra/Ipsos", "Buenos Aires, Argentina","2011-2012", "Scripting and pre-analysis of online Surveys",
+  "Online Survey Analyst/Scripter", "Livra/Ipsos", "Buenos Aires, Argentina","2011-2012", "Improved the DB preparation process saving approximately 120-160
+Project Manager ́s man-hours per month by the conceptual design of a mathematical iterative procedure.",
+) %>% 
+  detailed_entries(role, dates, company, loc, details)
+```
+
+# Education
+```{r}
+tribble(
+  ~ degree, ~ uni, ~ loc, ~ dates, ~ details,
+  "MSc Data Mining and Knowledge Discovery", "University of Buenos Aires", "Buenos Aires, Argentina", "2012-2013","",
+  "Lit. Degreee in Sociology", "University of Buenos Aires", "Buenos Aires, Argentina", "2005-2010","",
+  "International Bacceulerate", "Pestalozzi Schule", "Buenos Aires, Argentina","1999-2004","Foreign Languages: German and English"
+) %>% 
+  detailed_entries(degree, dates, uni, loc, details)
+```
+
+# Certifications
+
+```{r}
+tribble(
+  ~degree, ~ dates,
+  "Google Cloud Professional Data Engineer", "2018"
+) %>% 
+  detailed_entries(degree, dates)
+```
+
+\newpage
+
+# Technical Competences
+
+```{r}
+tribble(
+  ~capability, ~ details,
+  "Programming languages", "R, Python, Ruby, Javascript, VBA, SQL",
+  "Databases/Data Formats", "SQL/MySQL, JSON/MongoDB, XML, Redis, etc.",
+  "Big Data Frameworks", "Hadoop,Spark,Beam",
+  "ML/ Deep Learning Frameworks", "Caffe, Tensorflow, Keras, Darknet",
+  "Cloud Services", "AWS, Google Cloud Platform, Microsoft Azure",
+  "OS", "Ubuntu, Debian, CentOS, Windows"
+) %>% 
+  detailed_entries(what = capability, why = details)
+```
+
+# Languages
+
+```{r}
+tribble(
+  ~capability, ~ details,
+  "English", "Bilingual",
+  "Geman", "Bilingual",
+  "Spanish", "Native"
+  
+) %>% 
+  detailed_entries(what = capability, why = details)
+```
